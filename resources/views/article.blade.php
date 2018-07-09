@@ -14,7 +14,7 @@
 		<div class="article">
 			@if(isset($article->fields->Images))
 			<div class="heros">
-				@foreach($article->fields->images as $image)
+				@foreach($article->fields->Images as $image)
 				<div class="hero">
 					<img src="{{ $image->url }}">
 				</div>
