@@ -1,0 +1,93 @@
+$header-font: 'Space Mono', monospace;
+$button-font: 'Space Mono', monospace;
+
+h1, h3 {
+    font-family: $header-font;
+}
+
+h1, h3.switcher {
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: 100;
+}
+
+h1.page-header {
+	font-size: 36px;
+	margin-top: 45px;
+	margin-bottom: 60px;
+	svg {
+		clear: both;
+	}
+}
+
+h2 {
+	text-transform: uppercase;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: left;
+	text-align: justify;
+} 
+
+h4 {
+    font-size: 1.2em;
+    font-weight: 100;
+    margin-bottom: 45px;
+}
+
+h3 {
+margin: 80px auto;
+letter-spacing: 1px;
+font-size: 1.8em;
+}
+
+.center-text {
+        text-align: center;
+      }
+
+a:hover,
+  a:focus {
+    color: black;
+    text-decoration: none;
+  }
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+html, body {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    color: #333;
+    text-align:center;
+}
+
+button {
+    background: black;
+    border: 0;
+    border-radius: 0;
+    color: white;
+    font-size: 1.5em;
+    font-family: $button-font;
+    padding: 20px;
+    cursor: pointer;
+}
+section.main_copy {
+    margin: auto;
+    max-width: 700px;
+    Padding: 2rem 3rem 3rem; 
+    border: 1px solid;
+    p {
+        line-height: 2;
+			margin-bottom: 0;
+    }
+    @media screen and (max-width: $break-small) {
+        padding: 15px;
+        p {
+            font-size: 14px;
+        }
+    }
+}
