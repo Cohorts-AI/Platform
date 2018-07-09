@@ -16,6 +16,7 @@ Route::post('/contact', 'HomeController@store');
 Route::get('/articles', [ 'as' => 'articles', 'uses' => 'ArticleController@index']);
 Route::get('/articles/{article}', [ 'as' => 'article', 'uses' => 'ArticleController@show']);
 Route::get('/projects', [ 'as' => 'projects', 'uses' => 'ArticleController@projects']);
+Route::get('/projects/{project}', [ 'as' => 'project', 'uses' => 'ArticleController@showProject']);
 
 Auth::routes();
 

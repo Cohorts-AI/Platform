@@ -35,22 +35,40 @@ class ArticleController extends Controller
 	
 	public function show($id)
 	{
+		$article = $this->fetchArticle($id);
+		
+		$data = [
+			"article" => $article
+		];
+		
+		return view('article')->with($data);
+	}
+	
+	public function showProject($id)
+	{
+		$article = $this->fetchArticle($id);
+		
+		$data = [
+			"article" => $article
+		];
+		
+		return view('project')->with($data);
+	}
+	
+	private function fetchArticle($article)
+	{
 		$airtable = new Airtable(array(
     	'api_key' => 'keyvFreSPTsbJU2ic',
     	'base'    => 'appagdRbOX4Ipmk33'
 		));
 		
-		$request = $airtable->getContent( 'Articles/recEs8jhOsDfy2vLK');
+		$request = $airtable->getContent( 'Articles/' . $article);
 		do {
 				$response = $request->getResponse();
 		}
 		while( $request = $response->next() );
 		
-		$data = [
-			"article" => $response
-		];
-		
-		return view('article')->with($data);
+		return $response;
 	}
 	
 	private function fetchArticles($articles) 
