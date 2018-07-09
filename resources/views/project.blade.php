@@ -10,7 +10,7 @@
 		</svg>
   </h1>
 	
-	<p><a href="/articles">&larr;</a></p>
+	<p><a href="/projects">&larr;</a></p>
 		<div class="article">
 			@if(isset($article->fields->Images))
 			<div class="heros">
