@@ -13,23 +13,25 @@
 
 	<div class="row">
 		@foreach($articles as $article)
-		<div class="col-lg-4">
-			<a href="/projects/{{ $article->id }}"><div class="article">
-				@if(isset($article->fields->Images))
-				<div class="hero">
-					<img src="{{ $article->fields->Images[0]->url }}">
-				</div>
-				@endif
+			@if(isset($article->fields->Name))
+			<div class="col-lg-6 col-xl-4">
+				<a href="/projects/{{ $article->id }}"><div class="article">
+					@if(isset($article->fields->Images))
+					<div class="hero">
+						<img src="{{ $article->fields->Images[0]->url }}">
+					</div>
+					@endif
 
-				@if(isset($article->fields->Name))
-				<h2>{{ $article->fields->Name }}</h2>
-				@endif
+					@if(isset($article->fields->Name))
+					<h2>{{ $article->fields->Name }}</h2>
+					@endif
 
-				@if(isset($article->fields->Excerpt))
-				<p>{{ $article->fields->Excerpt }} <span class="more">↳</span></p>
-				@endif
-			</div></a>
-		</div>
+					@if(isset($article->fields->Excerpt))
+					<p>{{ $article->fields->Excerpt }} <span class="more">↳</span></p>
+					@endif
+				</div></a>
+			</div>
+			@endif
 		@endforeach
 	</div>
 	
