@@ -13,7 +13,7 @@
 
 	<div class="row">
 		@foreach($articles as $article)
-		<div class="col-lg">
+		<div class="col-lg-4">
 			<a href="/projects/{{ $article->id }}"><div class="article">
 				@if(isset($article->fields->Images))
 				<div class="hero">
