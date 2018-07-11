@@ -10411,6 +10411,18 @@ a.text-dark:focus {
   }
 }
 
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 1600px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10424,6 +10436,17 @@ a.text-dark:focus {
 
 .cls-2 {
   fill: white !important;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 
 h1,
@@ -10662,6 +10685,8 @@ footer p {
 
 section.articles {
   text-align: left;
+  max-width: 960px;
+  margin: auto;
 }
 
 section.articles h1 {
@@ -10784,6 +10809,51 @@ section.articles .article .hero:before {
   top: 0;
   right: 0;
   bottom: 0;
+}
+
+section.articles.projects {
+  max-width: 1400px;
+}
+
+section.articles.projects .article {
+  padding-left: 0;
+  padding: 0 20px;
+  margin-top: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+section.articles.projects .article .hero {
+  position: relative;
+  width: 100%;
+  height: 100px !important;
+  left: auto;
+  margin-bottom: 40px;
+  top: auto;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+section.articles.projects .article .hero img {
+  height: auto;
+  width: 100%;
+}
+
+section.articles.projects .article .hero:before {
+  opacity: 0.8;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+section.articles.projects .article:hover .hero {
+  height: 120px !important;
+  margin-top: -10px;
+}
+
+section.articles.projects .article:hover .hero:before {
+  opacity: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 body h3.switcher > span {

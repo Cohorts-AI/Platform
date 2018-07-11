@@ -37,12 +37,14 @@
 
 		@if(Route::current()->getName() == 'articles' || Route::current()->getName() == 'article' || Route::current()->getName() == 'projects')
 			<h1 class="center-text logo-wrap">
-				<img v-if="menu == false" class="we_icon" src="/we_icon.png">
-				<img v-else class="we_icon" src="/we_icon_white.png">
+				<a href="/">
+					<img v-if="menu == false" class="we_icon" src="/we_icon.png">
+					<img v-else class="we_icon" src="/we_icon_white.png">
+				</a>
 			</h1>
 		@else 
 			<h1 class="center-text logo-wrap">
-				@include('partials._logo')
+				<a href="/">@include('partials._logo')</a>
 			</h1>
 			<h4>THE AGENCY PLATFORM</h4>
 		@endif

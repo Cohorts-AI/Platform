@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-<section class="articles">
+<section class="articles projects">
 	<h1 class="page-header">
 		Case Studies<br>
     <svg width="184" height="16" viewBox="0 0 184 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -11,24 +11,27 @@
   </h1>
 	
 
-  @foreach($articles as $article)
-		<a href="/projects/{{ $article->id }}"><div class="article">
-			@if(isset($article->fields->Name))
-			<h2>{{ $article->fields->Name }}</h2>
-			@endif
-			
-			
+	<div class="row">
+		@foreach($articles as $article)
+		<div class="col-lg">
+			<a href="/projects/{{ $article->id }}"><div class="article">
+				@if(isset($article->fields->Images))
+				<div class="hero">
+					<img src="{{ $article->fields->Images[0]->url }}">
+				</div>
+				@endif
 
-			@if(isset($article->fields->Images))
-			<div class="hero">
-				<img src="{{ $article->fields->Images[0]->url }}">
-			</div>
-			@endif
+				@if(isset($article->fields->Name))
+				<h2>{{ $article->fields->Name }}</h2>
+				@endif
 
-			@if(isset($article->fields->Excerpt))
+				@if(isset($article->fields->Excerpt))
 				<p>{{ $article->fields->Excerpt }} <span class="more">↳</span></p>
-			@endif
-		</div></a>
-  @endforeach
+				@endif
+			</div></a>
+		</div>
+		@endforeach
+	</div>
+	
 </section>
 @endsection

@@ -3,7 +3,7 @@
   <li class="text-center"><a href="/?creatives">Creatives</a></li>
 	<li class="text-center"><a href="/projects">Case Studies</a></li>
   <li class="text-center">
-		<a href="#">Labs</a>
+		Labs
 		<ul>
 			<li><a href="/articles">|- Articles</a></li>
 			<li><a href="#">L Explorations</a></li>
