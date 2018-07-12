@@ -10856,6 +10856,43 @@ section.articles.projects .article:hover .hero:before {
   transition: all 0.2s ease;
 }
 
+section.articles.project > p {
+  margin-top: -30px;
+}
+
+section.articles.project h1.page-header {
+  margin-bottom: 0px;
+}
+
+section.articles.project .article {
+  padding-left: 0;
+  margin-top: 40px;
+}
+
+section.articles.project .featured img {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+section.articles.project .services h3 {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+section.articles.project .services ul {
+  list-style: none;
+  padding: 0;
+}
+
+section.articles.project .services ul li {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+section.articles.project .markdown h3 {
+  margin-top: 0;
+}
+
 body h3.switcher > span {
   padding: 15px;
   cursor: pointer;
