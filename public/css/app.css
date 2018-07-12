@@ -10821,6 +10821,7 @@ section.articles.projects .article {
   margin-top: 0;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  margin-bottom: 30px;
 }
 
 section.articles.projects .article .hero {
@@ -10867,6 +10868,7 @@ section.articles.project h1.page-header {
 section.articles.project .article {
   padding-left: 0;
   margin-top: 40px;
+  cursor: auto;
 }
 
 section.articles.project .featured img {

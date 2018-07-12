@@ -5,6 +5,7 @@ section.articles.projects {
 		padding: 0 20px;
 		margin-top: 0;
 		transition: all 0.2s ease;
+		margin-bottom: 30px; 
 		.hero {
 			position: relative;
 			width: 100%;
@@ -45,6 +46,7 @@ section.articles.project {
 	.article {
 		padding-left: 0;
 		margin-top: 40px;
+		cursor: auto;
 	}
 	.featured {
 		img {
