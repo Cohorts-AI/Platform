@@ -1,7 +1,7 @@
 <ul v-if="menu" class="we-menu">
 	<li class="text-center"><a href="/">Brands</a></li>
   <li class="text-center"><a href="/?creatives">Creatives</a></li>
-	<li class="text-center"><a href="/projects">Case Studies</a></li>
+	<li class="text-center"><a href="/projects">Work</a></li>
   <!-- <li class="text-center">
 		Labs
 		<ul>
