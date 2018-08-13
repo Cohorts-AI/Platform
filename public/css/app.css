@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600|Space+Mono);/*!
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,900|Space+Mono);/*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
@@ -10813,6 +10813,35 @@ section.articles .article .hero:before {
 
 section.articles.projects {
   max-width: 1400px;
+  margin-top: 30px;
+}
+
+section.articles.projects h1 {
+  font-size: 60px;
+  font-weight: 900;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  margin: 15px 0;
+  text-align: left;
+  padding-left: 28px;
+  font-family: "Roboto";
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+section.articles.projects h1 a {
+  -webkit-text-stroke: 2px black;
+  color: white;
+}
+
+section.articles.projects h1:hover {
+  cursor: pointer;
+}
+
+section.articles.projects h1:hover a {
+  color: black;
+  -webkit-text-stroke: 0px;
 }
 
 section.articles.projects .article {
