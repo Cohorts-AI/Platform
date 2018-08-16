@@ -20,6 +20,7 @@
     "vue": "^2.5.7"
   },
   "dependencies": {
+    "lodash": "^4.17.10",
     "vue-markdown": "^2.2.4"
   }
 }

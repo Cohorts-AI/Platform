@@ -10812,8 +10812,10 @@ section.articles .article .hero:before {
 }
 
 section.articles.projects {
-  max-width: 1400px;
+  width: 100%;
   margin-top: 30px;
+  cursor: ns-resize;
+  position: fixed;
 }
 
 section.articles.projects h1 {
@@ -10833,15 +10835,52 @@ section.articles.projects h1 {
 section.articles.projects h1 a {
   -webkit-text-stroke: 2px black;
   color: white;
+  cursor: ns-resize;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
-section.articles.projects h1:hover {
-  cursor: pointer;
+section.articles.projects h1 small {
+  display: none;
+  font-size: 0.2em;
+  margin-left: 30px;
 }
 
-section.articles.projects h1:hover a {
+section.articles.projects h1.active {
+  cursor: ns-resize;
+}
+
+section.articles.projects h1.active small {
+  display: inline-block;
+}
+
+section.articles.projects h1.active a {
   color: black;
   -webkit-text-stroke: 0px;
+}
+
+section.articles.projects .services h3 {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+section.articles.projects .services ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+}
+
+section.articles.projects .services ul li {
+  font-weight: bold;
+  text-transform: uppercase;
+  background: white;
+  color: black;
+  display: inline-block;
+  font-size: 0.75em;
+  padding: 5px 8px;
+  margin-bottom: 8px;
+  font-weight: 100;
+  margin-right: 20px;
 }
 
 section.articles.projects .article {
@@ -11029,5 +11068,57 @@ input {
   background: transparent;
   text-indent: 8px;
   font-family: "Space Mono", monospace;
+}
+
+div.we-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+div.we-modal #modal-close {
+  width: 45px;
+  position: absolute;
+  right: -85px;
+  top: 0px;
+  cursor: pointer;
+}
+
+div.we-modal .modal-inner {
+  max-width: 840px;
+  margin: 60px auto;
+  background: black;
+  color: white;
+  padding: 45px;
+  position: relative;
+}
+
+div.we-modal .modal-inner img {
+  max-width: 100%;
+}
+
+div.we-modal .modal-inner h1 {
+  padding-left: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+div.we-modal .modal-inner h3 {
+  margin: 0;
+  font-family: "Roboto";
+  text-transform: uppercase;
+  line-height: 2.8;
+  font-size: 1.5em;
+  margin-bottom: 8px;
+}
+
+div.we-modal .modal-inner p {
+  margin-top: 25px;
+  margin-bottom: 0;
+  font-size: 0.8em;
+  letter-spacing: 1px;
 }
 

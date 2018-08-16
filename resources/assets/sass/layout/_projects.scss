@@ -1,6 +1,8 @@
 section.articles.projects {
-	max-width: 1400px;
+	width: 100%;
 	margin-top: 30px;
+	cursor: ns-resize;
+	position: fixed;
 	h1 {
 		font-size: 60px;
 		font-weight: 900;
@@ -15,14 +17,47 @@ section.articles.projects {
 		line-height: 1.2;
 		a { 
 			-webkit-text-stroke: 2px black;
-			color: white; 
+			color: white;
+			cursor: ns-resize;
+			transition: color 0.2s ease;
 		}
-		
-		&:hover {
-			cursor: pointer;
+		small {
+			display: none;
+			font-size: 0.2em;
+			margin-left: 30px;
+		}
+		&.active {
+			cursor: ns-resize;
+			small {
+				display: inline-block;
+			}
 			a {
 				color: black; 
 				-webkit-text-stroke: 0px;
+			}
+		}
+	}
+  .services {
+		h3 {
+			margin-top: 0;
+			margin-bottom: 25px;
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+        margin-top: 25px;
+			li {
+				font-weight: bold;
+				text-transform: uppercase;
+        background: white;
+        color: black;
+        display: inline-block;
+
+        font-size: 0.75em;
+          padding: 5px 8px;
+          margin-bottom: 8px;
+          font-weight: 100;
+          margin-right: 20px;
 			}
 		}
 	}

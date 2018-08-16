@@ -21,7 +21,9 @@ $.ajaxSetup({
   }
 });
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+import _ from 'lodash';
+
+Vue.component('projects-component', require('./components/ProjectsComponent.vue'));
 
 const app = new Vue({
   el: '#app',
@@ -33,7 +35,7 @@ const app = new Vue({
 		menu: false
   },
 	
-	components: {
+	components: { 
     VueMarkdown
   },
 	
@@ -47,7 +49,6 @@ const app = new Vue({
 			var url = new URL(window.location.href);
 			var c = url.searchParams.get("c");
 			
-			console.log(url);
 			if(url.search == "?creatives") {
 				this.form = 'creative';
 				$('body').attr('class', this.form);
