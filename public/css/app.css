@@ -10557,11 +10557,46 @@ main {
 }
 
 .we_icon {
-  max-width: 60px;
+  max-width: 40px;
 }
 
 .cls-1 {
   fill: black;
+}
+
+body.agency_layout .we-menu-toggle {
+  left: auto;
+  right: 0;
+  padding: 34px 38px;
+}
+
+body.agency_layout .we-menu-toggle .menu-toggle-black {
+  display: none;
+}
+
+body.agency_layout .logo {
+  margin: inherit;
+}
+
+body.agency_layout .logo-wrap {
+  text-align: left;
+}
+
+body.agency_layout header.main-header {
+  background: black;
+  padding: 30px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100px;
+  z-index: 22;
+}
+
+body.agency_layout #app {
+  padding: 0;
+  margin: 0;
+  max-width: none;
 }
 
 .logo {
@@ -10813,7 +10848,8 @@ section.articles .article .hero:before {
 
 section.articles.projects {
   width: 100%;
-  margin-top: 30px;
+  margin-top: 140px;
+  margin-left: 85px;
   cursor: ns-resize;
   position: fixed;
 }
@@ -10879,7 +10915,7 @@ section.articles.projects .services ul li {
   font-size: 0.75em;
   padding: 5px 8px;
   margin-bottom: 8px;
-  font-weight: 100;
+  font-weight: 300;
   margin-right: 20px;
 }
 
@@ -10961,6 +10997,76 @@ section.articles.project .services ul li {
 
 section.articles.project .markdown h3 {
   margin-top: 0;
+}
+
+body.home.agency_layout header.main-header {
+  background: white;
+  text-align: left;
+}
+
+body.home.agency_layout header.main-header .we_icon {
+  max-width: 40px;
+}
+
+body.home.agency_layout .we-menu-toggle .menu-toggle-white {
+  display: none;
+}
+
+body.home.agency_layout .we-menu-toggle .menu-toggle-black {
+  display: block;
+}
+
+body.home.agency_layout section.work_cta {
+  background: black;
+  min-height: 100vh;
+  width: 50vw;
+  text-align: left;
+  color: white;
+  float: left;
+}
+
+body.home.agency_layout section.work_cta .copy {
+  padding: 120px 80px;
+}
+
+body.home.agency_layout section.work_cta a {
+  color: white;
+  border: 1px solid white;
+  padding: 12px;
+  text-transform: uppercase;
+  margin-top: 45px;
+  display: inline-block;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  font-family: "Space Mono", monospace;
+}
+
+body.home.agency_layout section.work_cta h1 {
+  padding-top: 200px;
+  font-family: "Roboto";
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 1.2;
+}
+
+body.home.agency_layout section.work_cta p {
+  font-weight: 200;
+  font-size: 18px;
+  text-align: left;
+  margin-top: 25px;
+}
+
+body.home.agency_layout section.brand_cta {
+  float: left;
+  width: 50vw;
+  min-height: 100vh;
+}
+
+body.home.agency_layout section.brand_cta svg#logo_svg {
+  padding-top: 400px;
+  max-width: 400px;
+  margin: auto;
 }
 
 body h3.switcher > span {
@@ -11089,7 +11195,7 @@ div.we-modal #modal-close {
 
 div.we-modal .modal-inner {
   max-width: 840px;
-  margin: 60px auto;
+  margin: 120px auto;
   background: black;
   color: white;
   padding: 45px;

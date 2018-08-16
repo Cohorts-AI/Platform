@@ -5,10 +5,42 @@ main {
 }
 
 .we_icon {
-	max-width: 60px;
+	max-width: 40px;
 }
 
 .cls-1{fill:black;}
+
+body.agency_layout {
+    .we-menu-toggle {
+        left: auto;
+        right: 0;
+        padding: 34px 38px;
+        .menu-toggle-black {
+            display: none;
+        }
+    }
+    .logo {
+        margin: inherit;
+    }
+    .logo-wrap {
+        text-align: left;
+    }
+    header.main-header {
+        background: black;
+        padding: 30px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 100px;
+        z-index: 22;
+    }
+    #app {
+        padding: 0;
+        margin: 0;
+        max-width: none;
+    }
+}
 
 .logo {
     display: block;

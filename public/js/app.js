@@ -70201,7 +70201,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				this.active = this.projects[this.current];
 
 				var wrapper = $('section.projects');
-				wrapper.animate({ top: '-=100px' });
+				wrapper.animate({ top: '-=100px' }, { duration: 300 });
 			}
 		}, 1000, { 'trailing': false }),
 
@@ -70213,7 +70213,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				this.active = this.projects[this.current];
 
 				var wrapper = $('section.projects');
-				wrapper.animate({ top: '+=100px' });
+				wrapper.animate({ top: '+=100px' }, { duration: 300 });
 			}
 		}, 1000, { 'trailing': false })
 
@@ -70332,7 +70332,7 @@ var render = function() {
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-md-8" }, [
-                      _c("p", [_vm._v(_vm._s(_vm.active.fields.Excerpt))])
+                      _c("p", [_vm._v(_vm._s(_vm.active.fields.Markdown))])
                     ])
                   ])
                 ])

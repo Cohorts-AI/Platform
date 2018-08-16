@@ -14,7 +14,7 @@
                     </ul>
                 </div>
                 <div class="col-md-8">
-                    <p>{{ active.fields.Excerpt }}</p>
+                    <p>{{ active.fields.Markdown }}</p>
                 </div>
             </div>
 					</div>
@@ -110,7 +110,7 @@
 							this.active = this.projects[this.current];
 							
 							var wrapper = $('section.projects');
-							wrapper.animate({top: '-=100px'});
+							wrapper.animate({top: '-=100px'}, {duration: 300});
 						}
 					}, 1000, {'trailing': false}),
 					
@@ -122,7 +122,7 @@
 							this.active = this.projects[this.current];
 							
 							var wrapper = $('section.projects');
-							wrapper.animate({top: '+=100px'});
+							wrapper.animate({top: '+=100px'}, {duration: 300});
 						}
 					}, 1000, {'trailing': false}),
 					
