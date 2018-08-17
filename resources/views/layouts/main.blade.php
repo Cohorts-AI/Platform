@@ -19,7 +19,7 @@
     
 	<main id="app" class="container">
 		<div v-on:click="toggleMenu()" class="we-menu-toggle">
-        <svg class="menu-toggle-black" v-if="menu == false" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+        <svg class="menu-toggle-black" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
          <title>cheeseburger</title>
 
          <g>
@@ -28,13 +28,13 @@
          </g>
          <g>
           <title>Layer 1</title>
-          <rect fill="#000" id="svg_1" height="3" width="25" y="5" x="5"/>
-          <rect fill="#000" id="svg_2" height="1" width="25" y="13" x="5"/>
-          <rect fill="#000" id="svg_3" height="2" width="25" y="16" x="5"/>
-          <rect fill="#000" id="svg_4" height="3" width="25" y="25" x="5"/>
+          <rect class="rec" fill="#000" id="svg_1" height="3" width="25" data-orig="5" y="5" x="5"/>
+          <rect class="rec" fill="#000" id="svg_2" height="1" width="25" data-orig="13" y="13" x="5"/>
+          <rect class="rec" fill="#000" id="svg_3" height="2" width="25" data-orig="16" y="16" x="5"/>
+          <rect class="rec" fill="#000" id="svg_4" height="3" width="25" data-orig="25" y="25" x="5"/>
          </g>
         </svg>
-        <svg class="menu-toggle-white" v-if="menu == false" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+        <svg class="menu-toggle-white" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
          <title>cheeseburger</title>
 
          <g>

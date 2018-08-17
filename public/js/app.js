@@ -34791,6 +34791,19 @@ var app = new Vue({
 			} else {
 				this.menu = false;
 			}
+			this.closeButton();
+		},
+
+		closeButton: function closeButton() {
+			if (this.menu == true) {
+				$(".rec").attr('y', 16);
+				$(".rec").attr('fill', "#FFFFFF");
+			} else {
+				$(".rec").each(function () {
+					$(this).attr('y', $(this).data('orig'));
+				});
+				$(".rec").attr('fill', "#000000");
+			}
 		}
 
 	}

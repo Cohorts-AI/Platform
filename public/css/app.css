@@ -10675,6 +10675,11 @@ h1.logo-wrap {
   z-index: 222;
 }
 
+.we-menu-toggle .rec {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
 .we-menu-toggle svg {
   float: right;
   margin-left: 5px;
