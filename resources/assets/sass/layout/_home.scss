@@ -32,6 +32,10 @@ body.home.agency_layout {
             font-size: 0.8em;
             letter-spacing: 1px;
             font-family: $serif;
+            &:hover {
+                color: $highlight;
+                border-color: $highlight;
+            }
         }
         h1 {
             padding-top: 200px;

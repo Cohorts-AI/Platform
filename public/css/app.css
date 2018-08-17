@@ -11046,6 +11046,11 @@ body.home.agency_layout section.work_cta a {
   font-family: "Space Mono", monospace;
 }
 
+body.home.agency_layout section.work_cta a:hover {
+  color: #6dfd6f;
+  border-color: #6dfd6f;
+}
+
 body.home.agency_layout section.work_cta h1 {
   padding-top: 200px;
   font-family: "Roboto";
