@@ -11048,8 +11048,20 @@ body.home.agency_layout section.work_cta a {
 }
 
 body.home.agency_layout section.work_cta a:hover {
-  color: white;
-  border-color: white;
+  -webkit-animation: blinker 1s linear 1;
+          animation: blinker 1s linear 1;
+}
+
+@-webkit-keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
 
 body.home.agency_layout section.work_cta h1 {

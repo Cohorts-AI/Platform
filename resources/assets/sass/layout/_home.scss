@@ -33,8 +33,13 @@ body.home.agency_layout {
             letter-spacing: 1px;
             font-family: $serif;
             &:hover {
-                color: white;
-                border-color: white;
+              animation: blinker 1s linear 1;
+            }
+
+            @keyframes blinker {
+              50% {
+                opacity: 0;
+              }
             }
         }
         h1 {
