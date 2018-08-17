@@ -31,8 +31,16 @@ class APIController extends Controller
 				'api_key' => 'keyvFreSPTsbJU2ic',
 				'base'    => 'appagdRbOX4Ipmk33'
 			));
+        
 
-			$request = $airtable->getContent( $articles );
+			$request = $airtable->getContent( $articles, [
+        'sort'  => [
+            [ 
+            'field'  => 'Order',
+            'direction'  => 'asc'
+            ]  
+        ]
+      ]);
 
 			do {
 					$response = $request->getResponse();
