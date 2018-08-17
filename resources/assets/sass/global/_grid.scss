@@ -12,3 +12,38 @@ $break-large: 1100px;
     max-width: 1600px;
   }
 }
+
+@media (max-width: 1510px){
+    body.home.agency_layout section.work_cta {
+        h1 {
+            font-size: 40px !important;
+        }
+    }
+}
+
+@media (max-width: 1119px){
+    body.home.agency_layout section.work_cta {
+        width: 100vw !important;
+        h1 {
+            font-size: 60px !important;
+        }
+    }
+    body.home.agency_layout section.brand_cta {
+        display: none;
+    }
+}
+@media (max-width: 758px){
+    body.home.agency_layout section.work_cta {
+        h1 {
+            padding-top: 80px !important;
+            font-size: 40px !important;
+        }
+    }
+}
+@media (max-width: 559px){
+    body.home.agency_layout section.work_cta {
+        h1 {
+            font-size: 20px !important;
+        }
+    }
+}
