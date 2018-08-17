@@ -54,8 +54,9 @@ section.articles.projects {
 			li {
 				font-weight: bold;
 				text-transform: uppercase;
-        background: white;
-        color: black;
+        border: 3px solid $highlight;
+        color: $highlight;
+        font-family: $serif;
         display: inline-block;
 
         font-size: 0.75em;

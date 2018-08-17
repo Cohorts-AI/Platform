@@ -10914,8 +10914,9 @@ section.articles.projects .services ul {
 section.articles.projects .services ul li {
   font-weight: bold;
   text-transform: uppercase;
-  background: white;
-  color: black;
+  border: 3px solid #6dfd6f;
+  color: #6dfd6f;
+  font-family: "Space Mono", monospace;
   display: inline-block;
   font-size: 0.75em;
   padding: 5px 8px;
