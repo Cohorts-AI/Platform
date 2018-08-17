@@ -5,11 +5,12 @@ div.we-modal {
     right: 0;
     left: 0;
     background: rgba(0,0,0,0.8);
+    z-index: 333;
     #modal-close {
-        width: 45px;
+        width: 30px;
         position: absolute;
-        right: -85px;
-        top: 0px;
+        right: 45px;
+        top: 45px;
         cursor: pointer;
     }
     .modal-inner {
@@ -21,6 +22,9 @@ div.we-modal {
         position: relative;
         img {
             max-width: 100%;
+        }
+        a {
+            color: white;
         }
         h1 {
             padding-left: 0;

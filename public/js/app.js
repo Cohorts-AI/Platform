@@ -70137,7 +70137,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			projects: '',
 			current: 0,
 			active: '',
-			modal: false
+			modal: false,
+			short_window: false
 		};
 	},
 	mounted: function mounted() {
@@ -70147,10 +70148,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		this.$nextTick(function () {
 			window.addEventListener('scroll', this.noScroll);
 			this.navInit();
+			this.responsive();
 		});
 	},
 
 	methods: {
+
+		responsive: function responsive() {
+			var loaded_height = $(window).height();
+			if (loaded_height < 840) {
+				this.short_window = true;
+			}
+		},
 
 		select: function select(project) {
 			if (project.active == false) {
@@ -70322,8 +70331,8 @@ var render = function() {
                               "text-anchor": "start",
                               "baseline-shift": "baseline",
                               opacity: "1",
-                              color: "#000000",
-                              fill: "#000000",
+                              color: "#FFF",
+                              fill: "#FFF",
                               "fill-opacity": "1",
                               stroke: "none",
                               "stroke-width": "2",
@@ -70350,11 +70359,22 @@ var render = function() {
                     ? _c("h1", [_vm._v(_vm._s(_vm.active.fields.Name))])
                     : _vm._e(),
                   _vm._v(" "),
-                  _vm.active.fields.URL
-                    ? _c("h3", [_vm._v(_vm._s(_vm.active.fields.URL))])
+                  _vm.active.fields.Subtitle
+                    ? _c("h3", [
+                        _c(
+                          "a",
+                          {
+                            attrs: {
+                              target: "_blank",
+                              href: _vm.active.fields.URL
+                            }
+                          },
+                          [_vm._v(_vm._s(_vm.active.fields.Subtitle))]
+                        )
+                      ])
                     : _vm._e(),
                   _vm._v(" "),
-                  _vm.active.fields.Hero
+                  _vm.active.fields.Hero && _vm.short_window == false
                     ? _c("img", {
                         attrs: { src: _vm.active.fields.Hero[0].url }
                       })

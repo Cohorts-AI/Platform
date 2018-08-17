@@ -10443,10 +10443,32 @@ a.text-dark:focus {
   }
 }
 
+@media (max-width: 849px) {
+  div.we-modal .modal-inner {
+    margin-top: 15px !important;
+  }
+}
+
+@media (max-width: 788px) {
+  body.agency_layout section.projects h1 {
+    font-size: 40px !important;
+  }
+}
+
 @media (max-width: 758px) {
   body.home.agency_layout section.work_cta h1 {
     padding-top: 80px !important;
     font-size: 40px !important;
+  }
+}
+
+@media (max-width: 788px) {
+  body.agency_layout section.projects {
+    margin-left: 4vw !important;
+  }
+
+  body.agency_layout section.projects h1 {
+    font-size: 30px !important;
   }
 }
 
@@ -11244,13 +11266,14 @@ div.we-modal {
   right: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.8);
+  z-index: 333;
 }
 
 div.we-modal #modal-close {
-  width: 45px;
+  width: 30px;
   position: absolute;
-  right: -85px;
-  top: 0px;
+  right: 45px;
+  top: 45px;
   cursor: pointer;
 }
 
@@ -11265,6 +11288,10 @@ div.we-modal .modal-inner {
 
 div.we-modal .modal-inner img {
   max-width: 100%;
+}
+
+div.we-modal .modal-inner a {
+  color: white;
 }
 
 div.we-modal .modal-inner h1 {

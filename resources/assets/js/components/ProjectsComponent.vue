@@ -3,10 +3,10 @@
 			
 			  <div v-if="modal" class="we-modal">
 					<div v-if="active != ''" class="modal-inner">
-            <svg v-on:click="toggle" id="modal-close" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" x="0px" y="0px" viewBox="0 0 100 125"><g transform="translate(0,-952.36218)"><path style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;opacity:1;color:#000000;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" d="M 12.875 11.96875 A 1.0001 1.0001 0 0 0 12.28125 13.6875 L 48.5625 50 L 12.28125 86.28125 A 1.0054956 1.0054956 0 1 0 13.71875 87.6875 L 50 51.40625 L 86.28125 87.6875 A 1.0054956 1.0054956 0 0 0 87.71875 86.28125 L 51.4375 50 L 87.71875 13.6875 A 1.0001 1.0001 0 0 0 86.96875 11.96875 A 1.0001 1.0001 0 0 0 86.28125 12.28125 L 50 48.5625 L 13.71875 12.28125 A 1.0001 1.0001 0 0 0 12.875 11.96875 z " transform="translate(0,952.36218)"/></g></svg>
+            <svg v-on:click="toggle" id="modal-close" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" x="0px" y="0px" viewBox="0 0 100 125"><g transform="translate(0,-952.36218)"><path style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;opacity:1;color:#FFF;fill:#FFF;fill-opacity:1;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" d="M 12.875 11.96875 A 1.0001 1.0001 0 0 0 12.28125 13.6875 L 48.5625 50 L 12.28125 86.28125 A 1.0054956 1.0054956 0 1 0 13.71875 87.6875 L 50 51.40625 L 86.28125 87.6875 A 1.0054956 1.0054956 0 0 0 87.71875 86.28125 L 51.4375 50 L 87.71875 13.6875 A 1.0001 1.0001 0 0 0 86.96875 11.96875 A 1.0001 1.0001 0 0 0 86.28125 12.28125 L 50 48.5625 L 13.71875 12.28125 A 1.0001 1.0001 0 0 0 12.875 11.96875 z " transform="translate(0,952.36218)"/></g></svg>
 						<h1 v-if="active.fields.Name">{{ active.fields.Name }}</h1>
-						<h3 v-if="active.fields.URL">{{ active.fields.URL }}</h3>
-            <img v-if="active.fields.Hero" v-bind:src="active.fields.Hero[0].url" />
+              <h3 v-if="active.fields.Subtitle"><a target="_blank" :href="active.fields.URL">{{ active.fields.Subtitle }}</a></h3>
+            <img v-if="active.fields.Hero && short_window == false" v-bind:src="active.fields.Hero[0].url" />
             <div class="row">
                 <div class="services col-md-4">
                     <ul>
@@ -33,7 +33,8 @@
 					 projects: '',
 					 current: 0,
 					 active: '',
-           modal: false
+           modal: false,
+           short_window: false
 				 }
 				},
         mounted() {			
@@ -43,9 +44,17 @@
 					this.$nextTick(function () {
 						window.addEventListener('scroll', this.noScroll);
 						this.navInit();
+            this.responsive();
 					});
         },
 			  methods: {
+            
+          responsive: function() {
+            var loaded_height = $( window ).height();
+            if(loaded_height < 840) {
+                this.short_window = true;
+            }  
+          },
             
           select: function(project) {
               if(project.active == false) {
