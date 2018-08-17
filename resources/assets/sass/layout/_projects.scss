@@ -21,6 +21,10 @@ section.articles.projects {
 			color: white;
 			cursor: ns-resize;
 			transition: color 0.2s ease;
+      &:hover {
+          -webkit-text-stroke: 2px $highlight;
+          cursor: pointer;
+      }
 		}
 		small {
 			display: none;

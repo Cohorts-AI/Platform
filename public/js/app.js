@@ -70139,6 +70139,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 	methods: {
 
+		select: function select(project) {
+			if (project.active == false) {
+				this.scrollTo(project);
+			} else {
+				this.toggle();
+			}
+		},
+
 		toggle: function toggle() {
 			if (this.modal == true) {
 				this.modal = false;
@@ -70189,6 +70197,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				}
 				if (e.deltaY > 0) {
 					parent.scrollDown();
+				}
+			});
+		},
+
+		scrollTo: function scrollTo(project) {
+			var parent = this;
+
+			this.projects.forEach(function (p) {
+				if (project.id == p.id) {
+					parent.current = parent.projects.map(function (e) {
+						return e.id;
+					}).indexOf(p.id);
+					parent.active = p;
+					parent.$set(parent.projects[parent.current], 'active', true);
+
+					parent.toggle();
+				} else {
+					p.active = false;
 				}
 			});
 		},
@@ -70344,7 +70370,14 @@ var render = function() {
         return project.fields.Name
           ? _c(
               "h1",
-              { class: { active: project.active }, on: { click: _vm.toggle } },
+              {
+                class: { active: project.active },
+                on: {
+                  click: function($event) {
+                    _vm.select(project)
+                  }
+                }
+              },
               [
                 _c("a", { attrs: { href: "#" } }, [
                   _vm._v(_vm._s(project.fields.Name))

@@ -10876,6 +10876,11 @@ section.articles.projects h1 a {
   transition: color 0.2s ease;
 }
 
+section.articles.projects h1 a:hover {
+  -webkit-text-stroke: 2px #6dfd6f;
+  cursor: pointer;
+}
+
 section.articles.projects h1 small {
   display: none;
   font-size: 0.2em;

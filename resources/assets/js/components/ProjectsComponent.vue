@@ -20,7 +20,7 @@
 					</div>
 				</div>
 	
-				<h1 v-on:click="toggle" v-for="project in projects" v-if="project.fields.Name" v-bind:class="{ active : project.active }"><a href="#">{{ project.fields.Name }}</a> <small><span class="more">↳</span> to view</small></h1>
+				<h1 v-on:click="select(project)" v-for="project in projects" v-if="project.fields.Name" v-bind:class="{ active : project.active }"><a href="#">{{ project.fields.Name }}</a> <small><span class="more">↳</span> to view</small></h1>
 
 		</div>
 </template>
@@ -46,6 +46,14 @@
 					});
         },
 			  methods: {
+            
+          select: function(project) {
+              if(project.active == false) {
+                  this.scrollTo(project);
+              } else {
+                  this.toggle();
+              }
+          },
 					
           toggle: function() {
               if(this.modal == true) {
@@ -102,6 +110,22 @@
 						
 					},
 					
+          scrollTo: function(project) {
+              var parent = this;
+              
+              this.projects.forEach(function(p){
+                  if(project.id == p.id) {
+                      parent.current = parent.projects.map(function(e) { return e.id; }).indexOf(p.id);
+                      parent.active = p;
+                      parent.$set(parent.projects[parent.current], 'active', true);
+                      
+                      parent.toggle();
+                  } else {
+                      p.active = false;
+                  }
+              });
+          },
+            
 					scrollDown: _.throttle(function() {
 						if(this.current < this.projects.length) {
 							this.$set(this.projects[this.current], 'active', false);
