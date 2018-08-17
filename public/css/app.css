@@ -11036,8 +11036,8 @@ body.home.agency_layout section.work_cta .copy {
 }
 
 body.home.agency_layout section.work_cta a {
-  color: white;
-  border: 1px solid white;
+  color: #6dfd6f;
+  border: 3px solid #6dfd6f;
   padding: 12px;
   text-transform: uppercase;
   margin-top: 45px;
@@ -11048,8 +11048,8 @@ body.home.agency_layout section.work_cta a {
 }
 
 body.home.agency_layout section.work_cta a:hover {
-  color: #6dfd6f;
-  border-color: #6dfd6f;
+  color: white;
+  border-color: white;
 }
 
 body.home.agency_layout section.work_cta h1 {
