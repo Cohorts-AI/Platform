@@ -32,13 +32,6 @@ $break-large: 1100px;
         display: none;
     }
 }
-@media (max-width: 849px){
-    div.we-modal {
-        .modal-inner {
-            margin-top: 15px !important;
-        }
-    }
-}
 @media (max-width: 788px){
     body.agency_layout section.projects {
         h1 {
