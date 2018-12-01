@@ -1,3 +1,109 @@
 .landing_wrapper.ilocollective {
-	height: 100%; 
+	
+	nav.main_nav {
+		background: white;
+		height: 80px;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 4;
+		text-align: left;
+		padding-left: 30px;
+		box-shadow: 0 0 45px rgba(0,0,0,0.1);
+		li {
+			display: inline-block;
+			font-weight: 100;
+			font-size: 1.2rem;
+			text-transform: uppercase;
+			line-height: 80px;
+			margin: 0 35px;
+			letter-spacing: 1px;
+			a {
+				opacity: 0.55;
+			}
+		}
+		ul {
+			float: left;
+		}
+		ul.social {
+			float: right;
+			margin-right: 20px;
+			li {
+				margin: 0 5px;
+				font-size: 1.1em;
+			}
+			a {
+				opacity: .1;
+			}
+		}
+ 	}
+	
+	section.hero {
+		position: relative;
+		padding: 180px 0;
+		background-position: center !important;
+		background-size: cover !important;
+		&:before {
+			content: '';
+			background: rgba(275,275,275, 0.9);
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+		img {
+			max-height: 320px;
+			z-index: 3;
+			position: relative;
+		}
+		h2 {
+			z-index: 1;
+			position: relative;
+			font-weight: bold;
+			color: white;
+			font-size: 1.5rem;
+			letter-spacing: 2px;
+		}
+	}
+	
+	section.about_blocks {
+		display: flex;
+		align-items: flex-start;
+		flex-flow: row;
+		justify-content: center;
+		margin-top: 80px;
+		.block {
+			display: flex;
+			flex-flow: column;
+			max-width: 280px;
+			margin: 0 45px;
+			span {
+				font-size: 80px;
+				line-height: 0.8;
+				font-family: 'Parisienne', serif;
+				opacity: .2;
+			}
+			h3 {
+				margin-top: 30px;
+				margin-bottom: 0px;
+				text-transform: uppercase;
+				font-size: 1.2rem;
+				font-weight: bold;
+				font-family: 'Work Sans', sans-serif;
+				opacity: .8;
+			}
+			p {
+				font-size: 1rem;
+				letter-spacing: 1px;
+				opacity: .5;
+			}
+			> div {
+				display: flex;
+				flex-flow: column;
+			}
+		}
+	}
+	
 }

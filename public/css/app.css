@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,900|Space+Mono);/*!
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,900|Space+Mono|Parisienne);/*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
@@ -11312,5 +11312,145 @@ div.we-modal .modal-inner p {
   margin-bottom: 0;
   font-size: 0.8em;
   letter-spacing: 1px;
+}
+
+.landing_wrapper.ilocollective nav.main_nav {
+  background: white;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  text-align: left;
+  padding-left: 30px;
+  -webkit-box-shadow: 0 0 45px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 45px rgba(0, 0, 0, 0.1);
+}
+
+.landing_wrapper.ilocollective nav.main_nav li {
+  display: inline-block;
+  font-weight: 100;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  line-height: 80px;
+  margin: 0 35px;
+  letter-spacing: 1px;
+}
+
+.landing_wrapper.ilocollective nav.main_nav li a {
+  opacity: 0.55;
+}
+
+.landing_wrapper.ilocollective nav.main_nav ul {
+  float: left;
+}
+
+.landing_wrapper.ilocollective nav.main_nav ul.social {
+  float: right;
+  margin-right: 20px;
+}
+
+.landing_wrapper.ilocollective nav.main_nav ul.social li {
+  margin: 0 5px;
+  font-size: 1.1em;
+}
+
+.landing_wrapper.ilocollective nav.main_nav ul.social a {
+  opacity: .1;
+}
+
+.landing_wrapper.ilocollective section.hero {
+  position: relative;
+  padding: 180px 0;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+.landing_wrapper.ilocollective section.hero:before {
+  content: '';
+  background: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.landing_wrapper.ilocollective section.hero img {
+  max-height: 320px;
+  z-index: 3;
+  position: relative;
+}
+
+.landing_wrapper.ilocollective section.hero h2 {
+  z-index: 1;
+  position: relative;
+  font-weight: bold;
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.landing_wrapper.ilocollective section.about_blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 80px;
+}
+
+.landing_wrapper.ilocollective section.about_blocks .block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  max-width: 280px;
+  margin: 0 45px;
+}
+
+.landing_wrapper.ilocollective section.about_blocks .block span {
+  font-size: 80px;
+  line-height: 0.8;
+  font-family: 'Parisienne', serif;
+  opacity: .2;
+}
+
+.landing_wrapper.ilocollective section.about_blocks .block h3 {
+  margin-top: 30px;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Work Sans', sans-serif;
+  opacity: .8;
+}
+
+.landing_wrapper.ilocollective section.about_blocks .block p {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  opacity: .5;
+}
+
+.landing_wrapper.ilocollective section.about_blocks .block > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
 }
 
