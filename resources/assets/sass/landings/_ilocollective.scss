@@ -1,6 +1,12 @@
 .landing_wrapper.ilocollective {
-	
-	nav.main_nav {
+  h1,h3 {
+    font-family: "Roboto";
+  }
+  .clear {
+    clear: both;
+    float: none !important;
+  }
+  nav.main_nav {
 		background: white;
 		height: 80px;
 		position: fixed;
@@ -105,5 +111,67 @@
 			}
 		}
 	}
+  
+  section.apothecary {
+    background: #f7f7f7;
+    margin-top: 4rem;
+    h2 {
+      font-family: 'Parisienne', serif;
+      text-transform: capitalize;
+      font-size: 2.2rem;
+    }
+    div {
+      width: 50%;
+      float: left;
+    }
+    .apothecary-copy {
+      padding: 5rem 4rem;
+      p {
+        font-size: 0.9rem;
+        padding: 3rem 2rem;
+        color: rgba(0,0,0,0.5);
+      }
+    }
+    .apothecary-hero {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  
+  section.hours {
+    background: rgba(0,0,0,0.85);
+    color: rgba(275,275,275,0.65);
+    padding: 4rem;
+    display: flex;
+		align-items: flex-start;
+		flex-flow: row;
+		justify-content: center;
+    flex-wrap: wrap;
+    h2 {
+      font-family: 'Parisienne', serif;
+      text-transform: capitalize;
+      font-size: 2.2rem;
+      flex-basis: 100%;
+    }
+    h3 {
+      font-size: 0.8rem;
+      margin-bottom: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    p {
+      text-align: center;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      font-weight: bold;
+    }
+    > div {
+      display: flex;
+			flex-flow: column;
+			max-width: 280px;
+			margin: 0 45px;
+    }
+  }
 	
 }

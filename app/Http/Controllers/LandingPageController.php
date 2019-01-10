@@ -23,6 +23,14 @@ class LandingPageController extends Controller
 			$landing = $this->fetchLanding($id);
 			
 			$landing->class = strtolower(str_replace(' ', '', $landing->fields->Title));
+			$landing->blocks = [];
+			
+			if($landing->fields->About) {
+				$blocks = $landing->fields->About;
+				foreach($blocks as $block) {
+					array_push($landing->blocks, $this->fetchAboutBlocks($block));
+				}
+			}
 			
 			$data = [
 				"landing" => $landing
@@ -30,6 +38,22 @@ class LandingPageController extends Controller
 			
        return view('landingpages.show')->with($data);
    	}
+	
+	  private function fetchAboutBlocks($block)
+		{
+			$airtable = new Airtable(array(
+				'api_key' => 'keyvFreSPTsbJU2ic',
+				'base'    => 'appagdRbOX4Ipmk33'
+			));
+			
+			$request = $airtable->getContent( 'AboutBlocks/' . $block);
+			do {
+					$response = $request->getResponse();
+			}
+			while( $request = $response->next() );
+
+			return $response;
+		}
 	
 		private function fetchLanding($landing)
 		{
